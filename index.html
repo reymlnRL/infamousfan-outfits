@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Outfits Mod Generator & Download</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="tabs">
+      <li class="tab-link current" data-tab="home">🏠 Home</li>
+      <li class="tab-link" data-tab="community">🌐 Community</li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="tab-content current">
+    <div id="gui">
+      <h2>Outfits Mod Generator & Download</h2>
+      <label>Nombre Outfit:</label>
+      <input id="outfitName" type="text" value="Outfit_Generado"/>
+      <label>Modelo:</label>
+      <select id="modelSelect">
+        <option value="male">Masculino</option>
+        <option value="female">Femenino</option>
+      </select>
+      <hr>
+      <h3>Presets</h3>
+      <button class="presetBtn" onclick="loadPreset('urbano')">🏙️ Urbano</button>
+      <button class="presetBtn" onclick="loadPreset('militar')">🎖️ Militar</button>
+      <button class="presetBtn" onclick="loadPreset('casual')">👕 Casual</button>
+      <hr>
+      <h3>Componentes</h3>
+      <div id="components"></div>
+      <hr>
+      <h3>Props</h3>
+      <div id="props"></div>
+      <hr>
+      <h3>Colores</h3>
+      <div class="flexRow">Color principal:<input type="color" id="colorMain" value="#ffffff"></div>
+      <div class="flexRow">Color secundario:<input type="color" id="colorSecondary" value="#555555"></div>
+      <hr>
+      <button id="generateBtn">📝 Generar JSON</button>
+      <button id="downloadBtn">💾 Descargar JSON</button>
+    </div>
+    <canvas id="renderArea"></canvas>
+  </section>
+
+  <section id="community" class="tab-content">
+    <div class="community-section">
+      <h2>🌐 Community</h2>
+      <p>Descarga tus JSON aquí o comparte tus outfits con la comunidad. 👇</p>
+      <button id="downloadCommunityBtn">💾 Download JSON</button>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
